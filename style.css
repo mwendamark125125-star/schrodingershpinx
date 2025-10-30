@@ -1,0 +1,226 @@
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #26004d, #7303c0, #ec38bc, #fdeff9);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* === ANIMATIONS === */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === HEADER === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff79c6;
+  text-shadow: 0 0 15px #ff79c6;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff79c6;
+  text-shadow: 0 0 10px #ff79c6;
+}
+
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  text-align: center;
+  height: 90vh;
+}
+
+.banner {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  opacity: 0.5;
+  filter: brightness(70%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  animation: fadeIn 1.5s ease;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ff79c6;
+  box-shadow: 0 0 25px #ff79c6;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.yt-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #ff79c6;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px #ff79c6;
+  transition: 0.3s;
+}
+
+.yt-btn:hover {
+  background: #ff4ec7;
+  box-shadow: 0 0 25px #ff79c6;
+}
+
+/* === ABOUT SECTION === */
+.about {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+  color: #ff79c6;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* === MUSIC SECTION === */
+.music {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.music h2 {
+  color: #ff79c6;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #ff79c6;
+}
+
+.videos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.videos iframe {
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+  border: 2px solid #ff79c6;
+  box-shadow: 0 0 20px #ff79c6;
+}
+
+/* === CONTACT SECTION === */
+.contact {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.contact h2 {
+  color: #ff79c6;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+button {
+  background: #ff79c6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4ec7;
+  box-shadow: 0 0 20px #ff79c6;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+  color: #ccc;
+}
